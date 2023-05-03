@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const names = ["Anu", "Hafi", "chinju", "manju", "anju"];
+      for (let i = 0; i < names.length; i++) {
+        console.log(`${i} ${names[i]}`);
+      }
+
+      //another way of for loop     (of used for values ad in used for index)
+      for (const name of names) console.log(name);
+
+      for (const name in names) console.log(name);
+
+      const letterFreq = (phase) => {
+        console.log(phase);
+        let frequency = {};
+        for (const latter of phase) {
+          if (latter in frequency) {
+            frequency[latter] ++
+          } else {
+            frequency[latter] = 1
+          }
+        }
+        return frequency;
+      }
+      console.log(letterFreq("hHHHHH"));
+    </script>
+  </body>
+</html>

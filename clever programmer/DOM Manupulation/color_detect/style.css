@@ -1,0 +1,21 @@
+.red-div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.yellow-div {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+.green-div {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+body {
+  display: flex;
+}

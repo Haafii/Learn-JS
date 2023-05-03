@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (e.key == "h") {
+          console.log("You clicked h");
+          document.getElementById('sound').play()
+        } else {
+          console.log("clicked key is not h");
+          document.getElementById('sound').pause()  
+        }
+      });
+    </script>
+  </body>
+  <audio
+    src="chimes-7035.mp3"
+    style="display: none"
+    type="audio/mpeg"
+    id="sound"
+  ></audio>
+</html>

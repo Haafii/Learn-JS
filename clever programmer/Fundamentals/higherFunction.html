@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //array functions--- Higher order functions .....ie, its takes arguments numbers as well as functions 
+      //operate on other functions  
+
+      let res = [1, 2, 3].map((num) => num * 2); //map function
+      console.log(res);
+
+
+
+      //a function used to filter numbers
+      const filter = (numbers, graterThan) => {
+        result = [];
+        for (const number of numbers) {
+          if (number > graterThan) {
+            result.push(number);
+          }
+        }
+        return result;
+      };
+      //console.log(filter([1, 2, 3, 4, 5, 6, 7], 3));
+      //.filter looping array returns an array with matching condition only...ie,
+      const nums = [1, 2, 3, 4, , 6, 7, 8];
+      console.log(nums.filter((num) => num > 3));
+
+
+
+
+      //reduce
+      const result = nums.reduce(function (prev, curr) {
+        return prev + curr; // get sum of elements of array nums
+      });
+      console.log(result);
+      //same bellow
+      const result1 = nums.reduce((a, b) => {
+        a + b;
+      });
+      console.log(result1);
+
+
+    </script>
+  </body>
+</html>

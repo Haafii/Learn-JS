@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classes</title>
+  </head>
+  <body>
+    <script>
+      class Car {
+        constructor(name, color, topSpeed) {
+          // properties
+          this.name = name;
+          this.color = color;
+          this.topSpeed = topSpeed;
+          this.currentSpeed = 0;
+        }
+        drive(speed = 10) { //passing speed as an argument while calling drive function , if nothing passed the default speed take as 10 
+          console.log("speeding.....");
+          this.currentSpeed += speed;
+          console.log(`current speed is ${this.currentSpeed}`);
+        }
+        break() {
+          console.log("breaking.....");
+          this.currentSpeed -= 10;
+          console.log(`current speed is ${this.currentSpeed}`);
+        }
+        stop() {
+          console.log("stopping.....");
+          this.currentSpeed = 0;
+          console.log(`current speed is ${this.currentSpeed}`);
+        }
+      }
+
+      const ferrari = new Car("ferrari", "red", "150");
+      console.log(`current speed is ${ferrari.currentSpeed}`);
+      // console.log(ferrari);
+      // console.log(ferrari.name);
+      // console.log(ferrari.color);
+      // console.log(`current speed is ${ferrari.currentSpeed}`);
+      // [1, 2, 3, 4, 5].forEach((_) => ferrari.drive());
+      ferrari.drive();
+      ferrari.drive(20);
+      ferrari.drive();
+      ferrari.drive(32);
+      ferrari.drive(5);
+      // [1, 2, 3].forEach((_) => ferrari.break());
+      ferrari.break();
+      ferrari.break();
+      ferrari.break();
+      ferrari.stop();
+    </script>
+  </body>
+</html>

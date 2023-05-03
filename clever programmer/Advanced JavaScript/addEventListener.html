@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>add Event Listener</title>
+  </head>
+  <body>
+    <div id="helloWorld">hello World</div>
+    <script>
+      const helloDiv = document.getElementById("helloWorld");
+      // helloDiv.onclick = () => {
+      //   console.log("UM...");
+      // };
+
+      helloDiv.addEventListener("click", function () {
+        console.log("ok");
+      });
+
+      document.addEventListener("keydown", function (e) { // e --> gives what key clicked in keyword
+        if(e.key == 'h'){
+          console.log('You clicked h');
+        }else{
+          console.log("clicked key is not h");
+        }
+      });
+    </script>
+  </body>
+</html>
